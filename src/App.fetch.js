@@ -18,16 +18,11 @@ class App extends React.Component {
         toast={this.state.toast}
         isLoading={this.state.isLoading}
         error={this.state.error}
-        onClick={() => this.callApi()}
       />
     );
   }
 
   componentDidMount() {
-    this.callApi();
-  }
-
-  callApi() {
     this.setState({ isLoading: true });
 
     fetch("/api")
@@ -35,7 +30,7 @@ class App extends React.Component {
         if (res.ok) {
           return res.json();
         } else {
-          throw new Error(`Received ${res.status}: ${res.statusText}`);
+          throw new Error("Received {res.status}: {res.statusText}");
         }
       })
       .then(data => {
