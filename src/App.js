@@ -30,7 +30,7 @@ class App extends React.Component {
   callApi() {
     this.setState({ isLoading: true });
 
-    fetch("/api")
+    fetch("https://quiet-atoll-11306.herokuapp.com/api")
       .then(res => {
         if (res.ok) {
           return res.json();
