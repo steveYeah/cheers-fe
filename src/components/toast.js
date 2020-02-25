@@ -23,24 +23,22 @@ function Toast(props) {
 
   return (
     <div className="jumbotron vertical-center bg-white">
-      <div className="card w-50 mx-auto">
-        <div className="card-body text-center">
-          <p className="card-text">{props.toast.quote}</p>
+      <div className="speech-bubble-ds">
+        <div className="text-center">
+          <p> {props.toast.quote}</p>
         </div>
-      </div>
-
-      <div className="w-50 mx-auto">
         <div className="text-right">
           <p className="text-muted">
             <i>{props.toast.cheers}!!!</i>
           </p>
         </div>
+        <div class="speech-bubble-ds-arrow"></div>
+      </div>
 
-        <div className="vertial-center text-center">
-          <button className="refresh" onClick={props.onClick}>
-            Refresh
-          </button>
-        </div>
+      <div className="vertial-center text-center">
+        <button className="refresh" onClick={props.onClick}>
+          Refresh
+        </button>
       </div>
     </div>
   );
