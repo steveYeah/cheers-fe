@@ -1,5 +1,9 @@
 import React from "react";
 import Toast from "./components/toast";
+import { config } from "./Constants";
+
+const URL = config.url.API_URL;
+console.log(URL);
 
 class App extends React.Component {
   constructor(props) {
@@ -30,7 +34,7 @@ class App extends React.Component {
   callApi() {
     this.setState({ isLoading: true });
 
-    fetch("https://quiet-atoll-11306.herokuapp.com/api")
+    fetch(URL)
       .then(res => {
         if (res.ok) {
           return res.json();
