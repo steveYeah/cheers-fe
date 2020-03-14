@@ -4,6 +4,7 @@ import { config } from "./Constants";
 
 const URL = config.url.API_URL;
 console.log(URL);
+console.log(process.env.NODE_ENV);
 
 class App extends React.Component {
   constructor(props) {
