@@ -1,10 +1,7 @@
 import React from "react";
 import Toast from "./components/toast";
-import { config } from "./Constants";
 
-const URL = config.url.API_URL;
-console.log(URL);
-console.log(process.env.NODE_ENV);
+const URL = process.env.REACT_APP_API_URL;
 
 class App extends React.Component {
   constructor(props) {
